@@ -1,4 +1,4 @@
-# Intro to Secure Shell (SSH)
+# Intro to Secure Shelll (SSH)
 
 In general, there are two ways to access your node machine: **locally**, and **remotely**.
 
