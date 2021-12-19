@@ -94,19 +94,19 @@ module.exports = {
       smoothScroll: true,
       nav: [
       {
-          text: 'FR- Overview',
+          text: 'Overview',
           link: '/overview/',
         },
         {
-          text: 'FR - Guides',
+          text: 'Guides',
           link: '/guides/'
         },
         {
-          text: 'FR- For Developers',
+          text: 'For Developers',
           link: '/developers/'
         },
         {
-          text: 'FR - Website',
+          text: 'Website',
           link: 'https://www.rocketpool.net'
         }
       ],
