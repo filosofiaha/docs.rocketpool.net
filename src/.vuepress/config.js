@@ -1,10 +1,29 @@
 const { description } = require('../../package')
 
 module.exports = {
+
+
+
+
+  locales: {
+      // The key is the path for the locale to be nested under.
+      // As a special case, the default locale can use '/' as its path.
+      '/': {
+        lang: 'en-US', // this will be set as the lang attribute on <html>
+        },
+      '/fr/': {
+        lang: 'fr-FR',
+        }
+    },
+
+
+
+
+
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Rocket Pool',
+  title: 'FR - Rocket Pool',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -32,302 +51,662 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: 'rocket-pool/docs.rocketpool.net',
-    editLinks: true,
-    docsDir: 'src',
-    docsBranch: 'main',
-    editLinkText: '',
-    lastUpdated: false,
-    logo: '/images/logo-small.png',
-    smoothScroll: true,
-    nav: [
-    {
-        text: 'Overview',
-        link: '/overview/',
-      },
-      {
-        text: 'Guides',
-        link: '/guides/'
-      },
-      {
-        text: 'For Developers',
-        link: '/developers/'
-      },
-      {
-        text: 'Website',
-        link: 'https://www.rocketpool.net'
-      }
-    ],
-    sidebar: {
-      '/overview/': [
-        {
-          title: 'Overview',
-          collapsable: false,
-          children: [
-            '',
-            'explainer-series',
-            'faq',
-            'glossary',
-          ]
-        }
-      ],
-      '/guides/': [
-        {
-          title: 'Guides',
-          sidebarDepth: 2,
-          collapsable: false,
-          children: [
-              '',
-              {
-                title: 'Staking with Rocket Pool',
-                sidebarDepth: 1,
-                collapsable: true,
-                children: [
-                    'staking/overview',
-                    'staking/via-rp',
-                    'staking/via-l1',
-                    'staking/via-l2'
-                ]
-              },
-              {
-                title: 'Running a Rocket Pool Node',
-                sidebarDepth: 2,
-                collapsable: true,
-                children: [
-                    'node/responsibilities',
-                    'node/platform',
-                    {
-                      title: 'Preparing a Local Node',
-                      sidebarDepth: 2,
-                      collapsable: true,
-                      children: [
-                          'node/local/hardware',
-                          'node/local/prepare-pc',
-                          'node/local/prepare-pi',
-                          'node/ssh'
-                      ]
-                    },
-                    {
-                      title: 'Preparing a Cloud (VPS) Node',
-                      sidebarDepth: 2,
-                      collapsable: true,
-                      children: [
-                          'node/vps/providers',
-                          'node/vps/os'
-                      ]
-                    },
-                    {
-                      title: 'Installing Rocket Pool',
-                      sidebarDepth: 2,
-                      collapsable: true,
-                      children: [
-                          'node/eth-clients',
-                          'node/install-modes',
-                          'node/docker',
-                          'node/hybrid',
-                          'node/native',
-                      ]
-                    },
-                    'node/securing-your-node',
-                    'node/starting-rp',
-                    'node/cli-intro',
-                    'node/prepare-node',
-                    'node/create-validator',
-                    {
-                      title: 'Monitoring and Maintenance',
-                      sidebarDepth: 2,
-                      collapsable: true,
-                      children: [
-                          'node/performance',
-                          'node/grafana',
-                          'node/updates',
-                          'node/backups',
-                          'node/geth-pruning'
-                      ]
-                    },
-                    'node/rewards',
-                    'node/troubleshooting',
-                    'node/faq'
-                ]
-              },
-              {
-                title: 'Testing Rocket Pool with the Prater Test Network',
-                sidebarDepth: 2,
-                collapsable: true,
-                children: [
-                  'testnet/overview',
-                  'testnet/upgrading',
-                ]
-              },
-              'node/mainnet',
-          ]
-        }
-      ],
-      '/developers/': [
-        {
-          title: 'For Developers',
-          sidebarDepth: 2,
-          collapsable: false,
-          children: [
-            '',
-            {
-              title: 'Integration Usage and Examples',
-              sidebarDepth: 2,
-              collapsable: true,
-              children: [
-                'usage/contracts/contracts',
-                'usage/go/go',
-                'usage/js/js',
-              ]
-            },
-            {
-              title: 'API Reference',
-              sidebarDepth: 2,
-              collapsable: true,
-              children: [
-                  'api/contracts',
-                  {
-                    title: 'Go Bindings',
-                    sidebarDepth: 2,
-                    collapsable: true,
-                    children: [
-                      'api/go/auction',
-                      'api/go/contracts',
-                      {
-                        title: 'dao',
-                        children: [
-                          'api/go/dao',
-                          'api/go/dao-protocol',
-                          'api/go/dao-trustednode',
 
-                        ]
-                      },
-                      'api/go/deposit',
-                      'api/go/minipool',
-                      'api/go/network',
-                      'api/go/node',
-                      'api/go/rewards',
-                      'api/go/rocketpool',
+
+
+
+
+    locales: {
+      '/': {
+        // text for the language dropdown
+        selectText: 'Languages',
+        // label for this locale in the language dropdown
+        label: 'English',
+        // Aria Label for locale in the dropdown
+        ariaLabel: 'Languages',
+        // text for the edit-on-github link
+      //  editLinkText: 'Edit this page on GitHub',
+        // config for Service Worker
+      //  serviceWorker: {
+      //    updatePopup: {
+      //      message: "New content is available.",
+      //      buttonText: "Refresh"
+      //    }
+      //  },
+        // algolia docsearch options for current locale
+      //  algolia: {},
+      //  nav: [
+      //    { text: 'Nested', link: '/nested/' , ariaLabel: 'Nested' }
+      //  ],
+      //  sidebar: {
+      //    '/': [/* ... */],
+      //    '/nested/': [/* ... */]
+      //  }
+
+
+      repo: 'rocket-pool/docs.rocketpool.net',
+      editLinks: true,
+      docsDir: 'src',
+      docsBranch: 'main',
+      editLinkText: '',
+      lastUpdated: false,
+      logo: '/images/logo-small.png',
+      smoothScroll: true,
+      nav: [
+      {
+          text: 'FR- Overview',
+          link: '/overview/',
+        },
+        {
+          text: 'FR - Guides',
+          link: '/guides/'
+        },
+        {
+          text: 'FR- For Developers',
+          link: '/developers/'
+        },
+        {
+          text: 'FR - Website',
+          link: 'https://www.rocketpool.net'
+        }
+      ],
+      sidebar: {
+        '/overview/': [
+          {
+            title: 'Overview',
+            collapsable: false,
+            children: [
+              '',
+              'explainer-series',
+              'faq',
+              'glossary',
+            ]
+          }
+        ],
+        '/guides/': [
+          {
+            title: 'Guides',
+            sidebarDepth: 2,
+            collapsable: false,
+            children: [
+                '',
+                {
+                  title: 'Staking with Rocket Pool',
+                  sidebarDepth: 1,
+                  collapsable: true,
+                  children: [
+                      'staking/overview',
+                      'staking/via-rp',
+                      'staking/via-l1',
+                      'staking/via-l2'
+                  ]
+                },
+                {
+                  title: 'Running a Rocket Pool Node',
+                  sidebarDepth: 2,
+                  collapsable: true,
+                  children: [
+                      'node/responsibilities',
+                      'node/platform',
                       {
-                        title: 'settings',
+                        title: 'Preparing a Local Node',
                         sidebarDepth: 2,
                         collapsable: true,
                         children: [
-                          'api/go/settings-protocol',
-                          'api/go/settings-trustednode',
+                            'node/local/hardware',
+                            'node/local/prepare-pc',
+                            'node/local/prepare-pi',
+                            'node/ssh'
                         ]
                       },
-                      'api/go/storage',
-                      'api/go/tokens',
-                      'api/go/types',
                       {
-                        title: 'utils',
+                        title: 'Preparing a Cloud (VPS) Node',
+                        sidebarDepth: 2,
+                        collapsable: true,
                         children: [
-                          'api/go/utils',
-                          'api/go/utils-eth',
-                          'api/go/utils-strings',
+                            'node/vps/providers',
+                            'node/vps/os'
                         ]
-                      }
-                    ]
-                  },
-                  {
-                      title: 'JS Reference',
+                      },
+                      {
+                        title: 'Installing Rocket Pool',
+                        sidebarDepth: 2,
+                        collapsable: true,
+                        children: [
+                            'node/eth-clients',
+                            'node/install-modes',
+                            'node/docker',
+                            'node/hybrid',
+                            'node/native',
+                        ]
+                      },
+                      'node/securing-your-node',
+                      'node/starting-rp',
+                      'node/cli-intro',
+                      'node/prepare-node',
+                      'node/create-validator',
+                      {
+                        title: 'Monitoring and Maintenance',
+                        sidebarDepth: 2,
+                        collapsable: true,
+                        children: [
+                            'node/performance',
+                            'node/grafana',
+                            'node/updates',
+                            'node/backups',
+                            'node/geth-pruning'
+                        ]
+                      },
+                      'node/rewards',
+                      'node/troubleshooting',
+                      'node/faq'
+                  ]
+                },
+                {
+                  title: 'Testing Rocket Pool with the Prater Test Network',
+                  sidebarDepth: 2,
+                  collapsable: true,
+                  children: [
+                    'testnet/overview',
+                    'testnet/upgrading',
+                  ]
+                },
+                'node/mainnet',
+            ]
+          }
+        ],
+        '/developers/': [
+          {
+            title: 'For Developers',
+            sidebarDepth: 2,
+            collapsable: false,
+            children: [
+              '',
+              {
+                title: 'Integration Usage and Examples',
+                sidebarDepth: 2,
+                collapsable: true,
+                children: [
+                  'usage/contracts/contracts',
+                  'usage/go/go',
+                  'usage/js/js',
+                ]
+              },
+              {
+                title: 'API Reference',
+                sidebarDepth: 2,
+                collapsable: true,
+                children: [
+                    'api/contracts',
+                    {
+                      title: 'Go Bindings',
                       sidebarDepth: 2,
                       collapsable: true,
                       children: [
-                          {
-                              title: 'Auction',
-                              children: [
-                                  'api/js/Auction',
-                              ]
-                          },
-                          {
-                              title: 'Contracts',
-                              children: [
-                                  'api/js/Contracts',
-                              ]
-                          },
-                          {
-                              title: 'DAO',
-                              children: [
-                                  'api/js/DAONodeTrusted',
-                                  'api/js/DAONodeTrustedActions',
-                                  'api/js/DAONodeTrustedProposals',
-                                  'api/js/DAONodeTrustedSettings',
-                                  'api/js/DAOProposal',
-                              ]
-                          },
-                          {
-                              title: 'Deposit',
-                              children: [
-                                  'api/js/Deposit',
-                              ]
-                          },
-                          {
-                              title: 'Minipool',
-                              children: [
-                                  'api/js/Minipool',
-                                  'api/js/MinipoolContract',
-                              ]
-                          },
-                          {
-                              title: 'Network',
-                              children: [
-                                  'api/js/Network',
-                              ]
-                          },
-                          {
-                              title: 'Node',
-                              children: [
-                                  'api/js/Node',
-                              ]
-                          },
-                          {
-                              title: 'Rewards',
-                              children: [
-                                  'api/js/Rewards',
-                                  'api/js/Pool',
-                              ]
-                          },
-                          {
-                              title: 'Settings',
-                              children: [
-                                  'api/js/AuctionSettings',
-                                  'api/js/DepositSettings',
-                                  'api/js/MinipoolSettings',
-                                  'api/js/NetworkSettings',
-                                  'api/js/NodeSettings',
-                              ]
-                          },
-                          {
-                              title: 'Tokens',
-                              children: [
-                                  'api/js/ERC20',
-                                  'api/js/LegacyRPL',
-                                  'api/js/RETH',
-                                  'api/js/RPL',
-                              ]
-                          },
-                          {
-                              title: 'Vault',
-                              children: [
-                                  'api/js/Vault',
-                              ]
-                          },
-                          {
-                              title: 'Rocketpool',
-                              children: [
-                                  'api/js/RocketPool',
-                              ]
-                          },
+                        'api/go/auction',
+                        'api/go/contracts',
+                        {
+                          title: 'dao',
+                          children: [
+                            'api/go/dao',
+                            'api/go/dao-protocol',
+                            'api/go/dao-trustednode',
+
+                          ]
+                        },
+                        'api/go/deposit',
+                        'api/go/minipool',
+                        'api/go/network',
+                        'api/go/node',
+                        'api/go/rewards',
+                        'api/go/rocketpool',
+                        {
+                          title: 'settings',
+                          sidebarDepth: 2,
+                          collapsable: true,
+                          children: [
+                            'api/go/settings-protocol',
+                            'api/go/settings-trustednode',
+                          ]
+                        },
+                        'api/go/storage',
+                        'api/go/tokens',
+                        'api/go/types',
+                        {
+                          title: 'utils',
+                          children: [
+                            'api/go/utils',
+                            'api/go/utils-eth',
+                            'api/go/utils-strings',
+                          ]
+                        }
                       ]
+                    },
+                    {
+                        title: 'JS Reference',
+                        sidebarDepth: 2,
+                        collapsable: true,
+                        children: [
+                            {
+                                title: 'Auction',
+                                children: [
+                                    'api/js/Auction',
+                                ]
+                            },
+                            {
+                                title: 'Contracts',
+                                children: [
+                                    'api/js/Contracts',
+                                ]
+                            },
+                            {
+                                title: 'DAO',
+                                children: [
+                                    'api/js/DAONodeTrusted',
+                                    'api/js/DAONodeTrustedActions',
+                                    'api/js/DAONodeTrustedProposals',
+                                    'api/js/DAONodeTrustedSettings',
+                                    'api/js/DAOProposal',
+                                ]
+                            },
+                            {
+                                title: 'Deposit',
+                                children: [
+                                    'api/js/Deposit',
+                                ]
+                            },
+                            {
+                                title: 'Minipool',
+                                children: [
+                                    'api/js/Minipool',
+                                    'api/js/MinipoolContract',
+                                ]
+                            },
+                            {
+                                title: 'Network',
+                                children: [
+                                    'api/js/Network',
+                                ]
+                            },
+                            {
+                                title: 'Node',
+                                children: [
+                                    'api/js/Node',
+                                ]
+                            },
+                            {
+                                title: 'Rewards',
+                                children: [
+                                    'api/js/Rewards',
+                                    'api/js/Pool',
+                                ]
+                            },
+                            {
+                                title: 'Settings',
+                                children: [
+                                    'api/js/AuctionSettings',
+                                    'api/js/DepositSettings',
+                                    'api/js/MinipoolSettings',
+                                    'api/js/NetworkSettings',
+                                    'api/js/NodeSettings',
+                                ]
+                            },
+                            {
+                                title: 'Tokens',
+                                children: [
+                                    'api/js/ERC20',
+                                    'api/js/LegacyRPL',
+                                    'api/js/RETH',
+                                    'api/js/RPL',
+                                ]
+                            },
+                            {
+                                title: 'Vault',
+                                children: [
+                                    'api/js/Vault',
+                                ]
+                            },
+                            {
+                                title: 'Rocketpool',
+                                children: [
+                                    'api/js/RocketPool',
+                                ]
+                            },
+                        ]
+                    },
+                ]
+              },
+            ]
+          },
+        ],
+      }
+
+
+
+
+
+
+
+      },
+
+
+
+
+
+      '/fr/': {
+        selectText: 'Langues',
+        label: 'Français',
+
+        repo: 'rocket-pool/docs.rocketpool.net',
+        editLinks: true,
+        docsDir: 'src',
+        docsBranch: 'main',
+        editLinkText: '',
+        lastUpdated: false,
+        logo: '/images/logo-small.png',
+        smoothScroll: true,
+        nav: [
+        {
+            text: 'FR - Overview',
+            link: '/overview/',
+          },
+          {
+            text: 'FR - Guides',
+            link: '/guides/'
+          },
+          {
+            text: 'FR - For Developers',
+            link: '/developers/'
+          },
+          {
+            text: 'FR - Website',
+            link: 'https://www.rocketpool.net'
+          }
+        ],
+        sidebar: {
+          '/overview/': [
+            {
+              title: 'FR - Overview',
+              collapsable: false,
+              children: [
+                '',
+                'explainer-series',
+                'faq',
+                'glossary',
+              ]
+            }
+          ],
+          '/guides/': [
+            {
+              title: 'FR - Guides',
+              sidebarDepth: 2,
+              collapsable: false,
+              children: [
+                  '',
+                  {
+                    title: 'FR - Staking with Rocket Pool',
+                    sidebarDepth: 1,
+                    collapsable: true,
+                    children: [
+                        'staking/overview',
+                        'staking/via-rp',
+                        'staking/via-l1',
+                        'staking/via-l2'
+                    ]
                   },
+                  {
+                    title: 'FR - Running a Rocket Pool Node',
+                    sidebarDepth: 2,
+                    collapsable: true,
+                    children: [
+                        'node/responsibilities',
+                        'node/platform',
+                        {
+                          title: 'FR - Preparing a Local Node',
+                          sidebarDepth: 2,
+                          collapsable: true,
+                          children: [
+                              'node/local/hardware',
+                              'node/local/prepare-pc',
+                              'node/local/prepare-pi',
+                              'node/ssh'
+                          ]
+                        },
+                        {
+                          title: 'FR - Preparing a Cloud (VPS) Node',
+                          sidebarDepth: 2,
+                          collapsable: true,
+                          children: [
+                              'node/vps/providers',
+                              'node/vps/os'
+                          ]
+                        },
+                        {
+                          title: 'FR - Installing Rocket Pool',
+                          sidebarDepth: 2,
+                          collapsable: true,
+                          children: [
+                              'node/eth-clients',
+                              'node/install-modes',
+                              'node/docker',
+                              'node/hybrid',
+                              'node/native',
+                          ]
+                        },
+                        'node/securing-your-node',
+                        'node/starting-rp',
+                        'node/cli-intro',
+                        'node/prepare-node',
+                        'node/create-validator',
+                        {
+                          title: 'FR - Monitoring and Maintenance',
+                          sidebarDepth: 2,
+                          collapsable: true,
+                          children: [
+                              'node/performance',
+                              'node/grafana',
+                              'node/updates',
+                              'node/backups',
+                              'node/geth-pruning'
+                          ]
+                        },
+                        'node/rewards',
+                        'node/troubleshooting',
+                        'node/faq'
+                    ]
+                  },
+                  {
+                    title: 'FR - Testing Rocket Pool with the Prater Test Network',
+                    sidebarDepth: 2,
+                    collapsable: true,
+                    children: [
+                      'testnet/overview',
+                      'testnet/upgrading',
+                    ]
+                  },
+                  'node/mainnet',
+              ]
+            }
+          ],
+          '/developers/': [
+            {
+              title: 'FR - For Developers',
+              sidebarDepth: 2,
+              collapsable: false,
+              children: [
+                '',
+                {
+                  title: 'FR - Integration Usage and Examples',
+                  sidebarDepth: 2,
+                  collapsable: true,
+                  children: [
+                    'usage/contracts/contracts',
+                    'usage/go/go',
+                    'usage/js/js',
+                  ]
+                },
+                {
+                  title: 'FR - API Reference',
+                  sidebarDepth: 2,
+                  collapsable: true,
+                  children: [
+                      'api/contracts',
+                      {
+                        title: 'FR - Go Bindings',
+                        sidebarDepth: 2,
+                        collapsable: true,
+                        children: [
+                          'api/go/auction',
+                          'api/go/contracts',
+                          {
+                            title: 'FR - dao',
+                            children: [
+                              'api/go/dao',
+                              'api/go/dao-protocol',
+                              'api/go/dao-trustednode',
+
+                            ]
+                          },
+                          'api/go/deposit',
+                          'api/go/minipool',
+                          'api/go/network',
+                          'api/go/node',
+                          'api/go/rewards',
+                          'api/go/rocketpool',
+                          {
+                            title: 'FR - settings',
+                            sidebarDepth: 2,
+                            collapsable: true,
+                            children: [
+                              'api/go/settings-protocol',
+                              'api/go/settings-trustednode',
+                            ]
+                          },
+                          'api/go/storage',
+                          'api/go/tokens',
+                          'api/go/types',
+                          {
+                            title: 'FR - utils',
+                            children: [
+                              'api/go/utils',
+                              'api/go/utils-eth',
+                              'api/go/utils-strings',
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                          title: 'FR - JS Reference',
+                          sidebarDepth: 2,
+                          collapsable: true,
+                          children: [
+                              {
+                                  title: 'FR - Auction',
+                                  children: [
+                                      'api/js/Auction',
+                                  ]
+                              },
+                              {
+                                  title: 'FR - Contracts',
+                                  children: [
+                                      'api/js/Contracts',
+                                  ]
+                              },
+                              {
+                                  title: 'FR - DAO',
+                                  children: [
+                                      'api/js/DAONodeTrusted',
+                                      'api/js/DAONodeTrustedActions',
+                                      'api/js/DAONodeTrustedProposals',
+                                      'api/js/DAONodeTrustedSettings',
+                                      'api/js/DAOProposal',
+                                  ]
+                              },
+                              {
+                                  title: 'FR - Deposit',
+                                  children: [
+                                      'api/js/Deposit',
+                                  ]
+                              },
+                              {
+                                  title: 'FR - Minipool',
+                                  children: [
+                                      'api/js/Minipool',
+                                      'api/js/MinipoolContract',
+                                  ]
+                              },
+                              {
+                                  title: 'FR - Network',
+                                  children: [
+                                      'api/js/Network',
+                                  ]
+                              },
+                              {
+                                  title: 'FR - Node',
+                                  children: [
+                                      'api/js/Node',
+                                  ]
+                              },
+                              {
+                                  title: 'FR - Rewards',
+                                  children: [
+                                      'api/js/Rewards',
+                                      'api/js/Pool',
+                                  ]
+                              },
+                              {
+                                  title: 'FR - Settings',
+                                  children: [
+                                      'api/js/AuctionSettings',
+                                      'api/js/DepositSettings',
+                                      'api/js/MinipoolSettings',
+                                      'api/js/NetworkSettings',
+                                      'api/js/NodeSettings',
+                                  ]
+                              },
+                              {
+                                  title: 'FR - Tokens',
+                                  children: [
+                                      'api/js/ERC20',
+                                      'api/js/LegacyRPL',
+                                      'api/js/RETH',
+                                      'api/js/RPL',
+                                  ]
+                              },
+                              {
+                                  title: 'FR - Vault',
+                                  children: [
+                                      'api/js/Vault',
+                                  ]
+                              },
+                              {
+                                  title: 'FR - Rocketpool',
+                                  children: [
+                                      'api/js/RocketPool',
+                                  ]
+                              },
+                          ]
+                      },
+                  ]
+                },
               ]
             },
-          ]
-        },
-      ],
+          ],
+        }
+
+
+
+
+
+      }
     }
+
+
+
+
+
+
+
   },
 
   // Import markdown plugins
