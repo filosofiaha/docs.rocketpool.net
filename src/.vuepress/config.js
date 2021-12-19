@@ -10,9 +10,11 @@ module.exports = {
       // As a special case, the default locale can use '/' as its path.
       '/': {
         lang: 'en-US', // this will be set as the lang attribute on <html>
+        title: 'Rocket Pool',
         },
       '/fr/': {
         lang: 'fr-FR',
+        title: 'FR - Rocket Pool',
         }
     },
 
@@ -20,10 +22,7 @@ module.exports = {
 
 
 
-  /**
-   * Ref：https://v1.vuepress.vuejs.org/config/#title
-   */
-  title: 'FR - Rocket Pool',
+
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -399,7 +398,7 @@ module.exports = {
 
         repo: 'rocket-pool/docs.rocketpool.net',
         editLinks: true,
-        docsDir: '/src/fr/',
+        docsDir: 'fr',
         docsBranch: 'main',
         editLinkText: '',
         lastUpdated: false,
