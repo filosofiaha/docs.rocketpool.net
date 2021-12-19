@@ -83,7 +83,7 @@ module.exports = {
       //  }
 
 
-      repo: 'rocket-pool/docs.rocketpool.net',
+      repo: 'filosofiaha/docs.rocketpool.net',
       editLinks: true,
       docsDir: 'src',
       docsBranch: 'main',
@@ -396,7 +396,7 @@ module.exports = {
         selectText: 'Langues',
         label: 'Français',
 
-        repo: 'rocket-pool/docs.rocketpool.net',
+        repo: 'filosofiaha/docs.rocketpool.net',
         editLinks: true,
         docsDir: 'fr',
         docsBranch: 'main',
@@ -407,15 +407,15 @@ module.exports = {
         nav: [
         {
             text: 'FR - Overview',
-            link: '/overview/',
+            link: '/fr/overview/',
           },
           {
             text: 'FR - Guides',
-            link: '/guides/'
+            link: '/fr/guides/'
           },
           {
             text: 'FR - For Developers',
-            link: '/developers/'
+            link: '/fr/developers/'
           },
           {
             text: 'FR - Website',
@@ -423,7 +423,7 @@ module.exports = {
           }
         ],
         sidebar: {
-          '/overview/': [
+          '/fr/overview/': [
             {
               title: 'FR - Overview',
               collapsable: false,
@@ -435,7 +435,7 @@ module.exports = {
               ]
             }
           ],
-          '/guides/': [
+          '/fr/guides/': [
             {
               title: 'FR - Guides',
               sidebarDepth: 2,
@@ -527,7 +527,7 @@ module.exports = {
               ]
             }
           ],
-          '/developers/': [
+          '/fr/developers/': [
             {
               title: 'FR - For Developers',
               sidebarDepth: 2,
