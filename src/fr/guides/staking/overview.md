@@ -1,4 +1,4 @@
-# Staking Overview
+# FR - Staking Overview
 
 This guide will introduce you to how staking with Rocket Pool works (how your ETH is put to work and your rewards are generated) and summarize the ways in which you can stake.
 
@@ -12,7 +12,7 @@ If you're not interested in how staking works and just want to learn how to stak
 Before getting into Rocket Pool, staking on the [Beacon Chain](https://ethereum.org/en/eth2/beacon-chain/) (ETH2) is done via **validators**.
 A validator is a single ETH2 address, to which 32 ETH was deposited, which is now responsible for helping maintain the consistency and security of the Beacon Chain.
 They do this by listening for transactions and new block proposals, and **attesting** that the proposed block contains legal, valid transactions by doing some number crunching and verification behind the scenes.
-Occasionally, they get to propose new blocks themselves. 
+Occasionally, they get to propose new blocks themselves.
 
 Validators in ETH2 are assigned attestations and block proposals **on a schedule**.
 This is very different from ETH1's proof of work system, where everyone is constantly trying to race each other and come up with the next block before everyone else.
@@ -149,7 +149,7 @@ You can move them or use them immediately.
 
 
 ### Via a Decentralized Exchange on a Layer 2 Network
-With this method, you will start by bridging your existing ETH (or other tokens of choice) onto an Ethereum Layer 2 network such as [Optimism](https://www.optimism.io/) or [Arbitrum](https://arbitrum.io/) and then use a decentralized exchange on the network to purchase rETH. If you already have tokens on a Layer 2 network, this method is compelling because **the transaction fees are ~10x smaller than on the Ethereum mainnet**. However, if you have not used a Layer 2 network before, it does require a few additional steps to get set up. 
+With this method, you will start by bridging your existing ETH (or other tokens of choice) onto an Ethereum Layer 2 network such as [Optimism](https://www.optimism.io/) or [Arbitrum](https://arbitrum.io/) and then use a decentralized exchange on the network to purchase rETH. If you already have tokens on a Layer 2 network, this method is compelling because **the transaction fees are ~10x smaller than on the Ethereum mainnet**. However, if you have not used a Layer 2 network before, it does require a few additional steps to get set up.
 
 Note that your rETH will **not be locked to your address** if you stake via an exchange.
 You can move them or use them immediately.

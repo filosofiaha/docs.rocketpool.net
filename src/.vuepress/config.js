@@ -399,7 +399,7 @@ module.exports = {
 
         repo: 'rocket-pool/docs.rocketpool.net',
         editLinks: true,
-        docsDir: 'src',
+        docsDir: '/src/fr/',
         docsBranch: 'main',
         editLinkText: '',
         lastUpdated: false,
