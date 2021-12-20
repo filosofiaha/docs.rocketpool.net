@@ -1,4 +1,4 @@
-# Staking via un échange décentralisé sur le réseau Ethereum ( Layer 1)
+# Staking via un échange décentralisé sur le réseau Ethereum (Layer 1)
 
 Pour rappel, il n'est pas nécessaire d'échanger des ETH contre des rETH directement via Rocket Pool pour profiter des avantages du staking décentralisé.
 Tout ce que vous avez à faire est de détenir des rETH car leur valeur augmente de manière inhérente - la manière dont vous les obtenez n'a pas d'importance !

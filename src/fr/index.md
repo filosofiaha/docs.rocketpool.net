@@ -1,20 +1,20 @@
 ---
 home: false
 heroImage: /images/logo.png
-tagline: FR - Decentralised & Trustless ETH2 Staking Protocol
-actionText: Get Started →
+tagline: Protocole de Staking d'ETH2 décentralisé & sans tiers de confiance
+actionText: Commencer ici →
 actionLink: /overview/
 features:
-- title: Overview
-  details: Learn all about what Rocket Pool is, how it works, and how to use it with an easy-to-read series of articles.
+- title: Aperçu
+  details: Apprenez tout sur ce qu'est Rocket Pool, comment cela fonctionne et comment l'utiliser grâce à une série d'articles faciles à lire.
   link: /overview/
 - title: Guides
-  details: Follow our detailed walkthroughs to practice using Rocket Pool on the Prater test network, from staking ETH to running a node.
+  details: Suivez nos procédures détaillées pour vous entraîner à utiliser Rocket Pool sur le réseau de test Prater, du staking ETH à la mise en route d'un nœud.
   link: /guides/
-- title: For Developers
-  details: Review our API Documentation and code examples to quickly integrate your application with our protocol.
+- title: Pour les développeurs
+  details: Consultez la documentation de notre API et les exemples de code pour intégrer rapidement votre application à notre protocole.
   link: /developers/
-footer: Made by Rocket Pool with ❤️
+footer: Fait par Rocket Pool avec ❤️
 ---
 
 <home />

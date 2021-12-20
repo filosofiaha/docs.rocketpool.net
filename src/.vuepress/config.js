@@ -14,7 +14,7 @@ module.exports = {
         },
       '/fr/': {
         lang: 'fr-FR',
-        title: 'FR - Rocket Pool',
+        title: 'Rocket Pool',
         }
     },
 
@@ -406,26 +406,26 @@ module.exports = {
         smoothScroll: true,
         nav: [
         {
-            text: 'FR - Overview',
+            text: 'Aperçu',
             link: '/fr/overview/',
           },
           {
-            text: 'FR - Guides',
+            text: 'Guides',
             link: '/fr/guides/'
           },
           {
-            text: 'FR - For Developers',
+            text: 'Pour les développeurs',
             link: '/fr/developers/'
           },
           {
-            text: 'FR - Website',
+            text: 'Site web',
             link: 'https://www.rocketpool.net'
           }
         ],
         sidebar: {
           '/fr/overview/': [
             {
-              title: 'FR - Overview',
+              title: 'Aperçu',
               collapsable: false,
               children: [
                 '',
@@ -437,13 +437,13 @@ module.exports = {
           ],
           '/fr/guides/': [
             {
-              title: 'FR - Guides',
+              title: 'Guides',
               sidebarDepth: 2,
               collapsable: false,
               children: [
                   '',
                   {
-                    title: 'FR - Staking with Rocket Pool',
+                    title: 'Staker avec Rocket Pool',
                     sidebarDepth: 1,
                     collapsable: true,
                     children: [
@@ -454,14 +454,14 @@ module.exports = {
                     ]
                   },
                   {
-                    title: 'FR - Running a Rocket Pool Node',
+                    title: 'Exécution d'un noeud Rocket Pool',
                     sidebarDepth: 2,
                     collapsable: true,
                     children: [
                         'node/responsibilities',
                         'node/platform',
                         {
-                          title: 'FR - Preparing a Local Node',
+                          title: 'Préparation d'un noeud local',
                           sidebarDepth: 2,
                           collapsable: true,
                           children: [
@@ -472,7 +472,7 @@ module.exports = {
                           ]
                         },
                         {
-                          title: 'FR - Preparing a Cloud (VPS) Node',
+                          title: 'Preparation d'un noeud dans le cloud (VPS)',
                           sidebarDepth: 2,
                           collapsable: true,
                           children: [
@@ -481,7 +481,7 @@ module.exports = {
                           ]
                         },
                         {
-                          title: 'FR - Installing Rocket Pool',
+                          title: 'Installation de Rocket Pool',
                           sidebarDepth: 2,
                           collapsable: true,
                           children: [
@@ -498,7 +498,7 @@ module.exports = {
                         'node/prepare-node',
                         'node/create-validator',
                         {
-                          title: 'FR - Monitoring and Maintenance',
+                          title: 'Suivi et maintenance',
                           sidebarDepth: 2,
                           collapsable: true,
                           children: [
@@ -515,7 +515,7 @@ module.exports = {
                     ]
                   },
                   {
-                    title: 'FR - Testing Rocket Pool with the Prater Test Network',
+                    title: 'Tester Rocket Pool avec le réseau Testnet Prater',
                     sidebarDepth: 2,
                     collapsable: true,
                     children: [
@@ -529,13 +529,13 @@ module.exports = {
           ],
           '/fr/developers/': [
             {
-              title: 'FR - For Developers',
+              title: 'Pour les développeurs',
               sidebarDepth: 2,
               collapsable: false,
               children: [
                 '',
                 {
-                  title: 'FR - Integration Usage and Examples',
+                  title: 'Exemples d'utilisation et d'intégration',
                   sidebarDepth: 2,
                   collapsable: true,
                   children: [
@@ -545,20 +545,20 @@ module.exports = {
                   ]
                 },
                 {
-                  title: 'FR - API Reference',
+                  title: 'Référence API',
                   sidebarDepth: 2,
                   collapsable: true,
                   children: [
                       'api/contracts',
                       {
-                        title: 'FR - Go Bindings',
+                        title: 'Go Bindings (titre à traduire)',
                         sidebarDepth: 2,
                         collapsable: true,
                         children: [
                           'api/go/auction',
                           'api/go/contracts',
                           {
-                            title: 'FR - dao',
+                            title: 'dao',
                             children: [
                               'api/go/dao',
                               'api/go/dao-protocol',
@@ -573,7 +573,7 @@ module.exports = {
                           'api/go/rewards',
                           'api/go/rocketpool',
                           {
-                            title: 'FR - settings',
+                            title: 'settings',
                             sidebarDepth: 2,
                             collapsable: true,
                             children: [
@@ -585,7 +585,7 @@ module.exports = {
                           'api/go/tokens',
                           'api/go/types',
                           {
-                            title: 'FR - utils',
+                            title: 'utils',
                             children: [
                               'api/go/utils',
                               'api/go/utils-eth',
@@ -595,24 +595,24 @@ module.exports = {
                         ]
                       },
                       {
-                          title: 'FR - JS Reference',
+                          title: 'Référence JS',
                           sidebarDepth: 2,
                           collapsable: true,
                           children: [
                               {
-                                  title: 'FR - Auction',
+                                  title: 'Auction',
                                   children: [
                                       'api/js/Auction',
                                   ]
                               },
                               {
-                                  title: 'FR - Contracts',
+                                  title: 'Contracts',
                                   children: [
                                       'api/js/Contracts',
                                   ]
                               },
                               {
-                                  title: 'FR - DAO',
+                                  title: 'DAO',
                                   children: [
                                       'api/js/DAONodeTrusted',
                                       'api/js/DAONodeTrustedActions',
@@ -622,39 +622,39 @@ module.exports = {
                                   ]
                               },
                               {
-                                  title: 'FR - Deposit',
+                                  title: 'Deposit',
                                   children: [
                                       'api/js/Deposit',
                                   ]
                               },
                               {
-                                  title: 'FR - Minipool',
+                                  title: 'Minipool',
                                   children: [
                                       'api/js/Minipool',
                                       'api/js/MinipoolContract',
                                   ]
                               },
                               {
-                                  title: 'FR - Network',
+                                  title: 'Network',
                                   children: [
                                       'api/js/Network',
                                   ]
                               },
                               {
-                                  title: 'FR - Node',
+                                  title: 'Node',
                                   children: [
                                       'api/js/Node',
                                   ]
                               },
                               {
-                                  title: 'FR - Rewards',
+                                  title: 'Rewards',
                                   children: [
                                       'api/js/Rewards',
                                       'api/js/Pool',
                                   ]
                               },
                               {
-                                  title: 'FR - Settings',
+                                  title: 'Settings',
                                   children: [
                                       'api/js/AuctionSettings',
                                       'api/js/DepositSettings',
@@ -664,7 +664,7 @@ module.exports = {
                                   ]
                               },
                               {
-                                  title: 'FR - Tokens',
+                                  title: 'Tokens',
                                   children: [
                                       'api/js/ERC20',
                                       'api/js/LegacyRPL',
@@ -673,13 +673,13 @@ module.exports = {
                                   ]
                               },
                               {
-                                  title: 'FR - Vault',
+                                  title: 'Vault',
                                   children: [
                                       'api/js/Vault',
                                   ]
                               },
                               {
-                                  title: 'FR - Rocketpool',
+                                  title: 'Rocketpool',
                                   children: [
                                       'api/js/RocketPool',
                                   ]

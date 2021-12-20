@@ -1,38 +1,38 @@
-# Staking Directly via Rocket Pool
+# Staker directement via Rocket Pool
 
-The easiest way to stake with Rocket Pool is done via its web interface to the underlying smart contracts.
+La façon la plus simple de staker avec Rocket Pool est de le faire via son interface web pour accéder aux contrats intelligents sous-jacents.
 
-The advantage is that you will always get exactly as much rETH as your ETH is worth, since Rocket Pool's contracts will directly mint the rETH that you receive.
-No extra fees, no slippage, no liquidity issues, no sandwiching or front running... you just get the best possible deal for rETH.
+L'avantage est que vous recevrez toujours exactement autant de rETH que votre ETH vaut, puisque les contrats de Rocket Pool monnayent directement les rETH que vous recevez.
+Pas de frais supplémentaires, pas de slippage, pas de problèmes de liquidité, pas de prise en sandwich ou de front running... vous obtenez simplement le meilleur deal possible pour les rETH.
 
-The disadvantage is that the gas fee might be quite expensive if you are staking a small amount of ETH - **we strongly recommend you check this before approving the transaction.**
-Also, there is a limit to the amount of ETH that can be in the pool at any given time, so it's possible that the pool could be full until Node Operators pull ETH from it and stake that ETH on the Beacon Chain.
+L'inconvénient est que les frais de gas peuvent être assez élevés si vous stakez un petit montant d'ETH - **nous vous recommandons fortement de vérifier cela avant d'approuver la transaction**.
+De plus, il y a une limite à la quantité d'ETH qui peut être dans le pool à tout moment, il est donc possible que le pool soit plein jusqu'à ce que les opérateurs de nœuds en tirent de l'ETH et mettent cet ETH en staking sur la Beacon Chain.
 
 ::: warning NOTE
-If you stake directly with Rocket Pool, your rETH tokens will be **locked to your account for 24 hours** before you can transfer them or use them in DeFi applications.
-This is a security measure to prevent against timing attacks.
-If you get your rETH from a decentralized exchange, your rETH will **not be locked**.
+Si vous misez directement avec Rocket Pool, vos tokens rETH seront **bloqués sur votre compte pendant 24 heures** avant que vous puissiez les transférer ou les utiliser dans des applications DeFi.
+Il s'agit d'une mesure de sécurité visant à prévenir les attaques temporelles.
+Si vous obtenez vos rETH à partir d'un échange décentralisé, vos rETH ne seront **pas verrouillés**.
 
-Please take this into consideration when deciding whether or not to stake directly via Rocket Pool.
+Veuillez prendre cela en considération lorsque vous décidez de staker directement ou non via Rocket Pool.
 :::
 
-The process is slightly different for the Prater Testnet and Mainnet, so choose the network you are interested in from the tabs below.
+La procédure est légèrement différente pour le Testnet Prater et le Mainnet, choisissez donc le réseau qui vous intéresse dans les onglets ci-dessous.
 
 ::::::: tabs
-:::::: tab Preparing on the Prater Testnet
+:::::: tab Se préparer sur le Testnet Prater
 
 ::: danger WARNING
-When practicing staking on the test network, you **do not need to provide any of your real ETH** during this process.
-You will be given **fake test ETH** to use instead.
+Lorsque vous vous entraînez au staking sur le réseau de test, vous **n'avez pas besoin de fournir vos véritables ETH** au cours de ce processus.
+Vous recevrez des **faux ETH de test** à utiliser à la place.
 
-**Do not attempt to move your real ETH on mainnet to the testnet or you will lose it permanently!** 
+**Ne tentez pas de déplacer votre ETH réel du Mainnet vers le Testnet ou vous le perdrez définitivement**.  
 :::
 
-Start by installing [MetaMask](https://metamask.io/) if you haven't already.
-Follow the instructions on their site to install the extension, create an account, and sign in.
+Commencez par installer [MetaMask] (https://metamask.io/) si ce n'est pas déjà fait.
+Suivez les instructions sur leur site pour installer l'extension, créer un compte et vous connecter.
 
-Next, open the MetaMask panel using its icon in your browser toolbar.
-Click on the **network dropdown** in the toolbar at the top and select **Goerli Test Network**:
+Ensuite, ouvrez le panneau MetaMask en utilisant son icône dans la barre d'outils de votre navigateur.
+Cliquez sur le menu déroulant **Réseaux** dans la barre d'outils en haut et sélectionnez **Réseau de test Goerli**:
 
 <center>
 
@@ -40,8 +40,8 @@ Click on the **network dropdown** in the toolbar at the top and select **Goerli 
 
 </center>
 
-Finally, add the rETH token to MetaMask so you can see your balance and access it for trading.
-Click the **Assets** tab, then click **Add Token**:
+Enfin, ajoutez le jeton rETH à MetaMask pour pouvoir voir votre solde et y accéder pour le trading.
+Cliquez sur l'onglet **Assets**, puis sur **import tokens**:
 
 <center>
 
@@ -49,23 +49,23 @@ Click the **Assets** tab, then click **Add Token**:
 
 </center>
 
-Ensure that **Custom Token** is selected in this dialog.
-In the **Token Contract Address** box, put the following value:
+Assurez-vous que **Jeton personnalisé** est sélectionné dans cette boîte de dialogue.
+Dans la case **Adresse du contrat du jeton**, mettez la valeur suivante:
 
 ```
 0x178e141a0e3b34152f73ff610437a7bf9b83267a
 ```
 
-The **Token Symbol** should automatically be populated with `rETH`, and the **Decimals of Precision** should automatically be populated with `18`.
+Le **Symbole du Jeton** devrait automatiquement être complété par `rETH`, et **Décimales de précision** devrait automatiquement être complété par `18`.
 
-Accept the rest of the prompts, and then you will see the rETH token appear in your list.
+Acceptez le reste des invites, et vous verrez le token rETH apparaître dans votre liste.
 
-Now that you have a wallet address in MetaMask, you need to fill it with some test ETH.
-Head over to the [Practicing with the Test Network](../testnet/overview.md#getting-test-eth-on-goerli) page for a quick guide on how to use a testnet faucet to get some test ETH on Goerli.
+Maintenant que vous avez une adresse de portefeuille dans MetaMask, vous devez y transférer de l'ETH.
+Rendez-vous sur la page [Practicing with the Test Network](../testnet/overview.md#getting-test-eth-on-goerli) pour un guide rapide sur la façon d'utiliser un faucet testnet pour obtenir des ETH de test sur Goerli.
 
-Once you have some Goerli ETH to test with, head to [https://testnet.rocketpool.net/](https://testnet.rocketpool.net/).
+Une fois que vous avez quelques ETH de Goerli à tester, rendez-vous sur [https://testnet.rocketpool.net/](https://testnet.rocketpool.net/).
 
-The page should look like this:
+La page devrait ressembler à ceci:
 
 <center>
 
@@ -73,16 +73,16 @@ The page should look like this:
 
 </center>
 
-If you see a notice about a web3 browser being required, or the current network ID being unsupported, make sure you’ve completed the previous steps correctly before continuing.
+Si vous voyez un message indiquant qu'un navigateur web3 est nécessaire, ou que l'ID réseau actuel n'est pas pris en charge, assurez-vous d'avoir effectué correctement les étapes précédentes avant de continuer.
 
 ::::::
-:::::: tab Preparing on the Ethereum Mainnet
+:::::: tab Se préparer sur le Mainnet d'Ethereum
 
-Start by installing [MetaMask](https://metamask.io/) if you haven't already.
-Follow the instructions on their site to install the extension, create an account, and sign in.
+Commencez par installer [MetaMask] (https://metamask.io/) si ce n'est pas déjà fait.
+Suivez les instructions sur leur site pour installer l'extension, créer un compte et vous connecter.
 
-Next, open the MetaMask panel using its icon in your browser toolbar.
-Click on the **network dropdown** in the toolbar at the top and ensure that **Ethereum Mainnet** is selected:
+Ensuite, ouvrez le panneau MetaMask en utilisant son icône dans la barre d'outils de votre navigateur.
+Cliquez sur la liste déroulante **Réseaux** dans la barre d'outils en haut et assurez-vous que **Réseau principal Ethereum** est sélectionné:
 
 <center>
 
@@ -90,8 +90,8 @@ Click on the **network dropdown** in the toolbar at the top and ensure that **Et
 
 </center>
 
-Finally, add the rETH token to MetaMask so you can see your balance and access it for trading.
-Click the **Assets** tab, then click **Add Token**:
+Enfin, ajoutez le jeton rETH à MetaMask pour pouvoir voir votre solde et y accéder pour le trading.
+Cliquez sur l'onglet **Assets**, puis sur **import tokens**:
 
 <center>
 
@@ -99,23 +99,23 @@ Click the **Assets** tab, then click **Add Token**:
 
 </center>
 
-Ensure that **Custom Token** is selected in this dialog.
-In the **Token Contract Address** box, put the following value:
+Assurez-vous que **Jeton personnalisé** est sélectionné dans cette boîte de dialogue.
+Dans la case **Adresse du contrat du jeton**, mettez la valeur suivante:
 
 ```
 0xae78736Cd615f374D3085123A210448E74Fc6393
 ```
 
-The **Token Symbol** should automatically be populated with `rETH`, and the **Decimals of Precision** should automatically be populated with `18`.
+Le **Symbole du Jeton** devrait automatiquement être complété par `rETH`, et **Décimales de précision** devrait automatiquement être complété par `18`.
 
-Accept the rest of the prompts, and then you will see the rETH token appear in your list.
+Acceptez le reste des invites, et vous verrez le token rETH apparaître dans votre liste.
 
-Now that you have a wallet address in MetaMask, you need to transfer some ETH into it.
-You will need to supply this from an existing wallet or buy ETH on an exchange.
+Maintenant que vous avez une adresse de portefeuille dans MetaMask, vous devez y transférer de l'ETH.
+**Vous devrez fournir cela à partir d'un portefeuille existant ou acheter des ETH sur un échange.**
 
-Once you have some ETH to stake, head to [https://stake.rocketpool.net/](https://stake.rocketpool.net/).
+Une fois que vous avez quelques ETH à staker, dirigez-vous vers [https://stake.rocketpool.net/](https://stake.rocketpool.net/).
 
-The page should look like this:
+La page devrait ressembler à ceci:
 
 <center>
 
@@ -123,16 +123,16 @@ The page should look like this:
 
 </center>
 
-If you see a notice about a web3 browser being required, or the current network ID being unsupported, make sure you’ve completed the previous steps correctly before continuing.
+Si vous voyez un message indiquant qu'un navigateur web3 est nécessaire, ou que l'ID réseau actuel n'est pas pris en charge, assurez-vous d'avoir effectué correctement les étapes précédentes avant de continuer.
 
 ::::::
 :::::::
 
 
-Once you're at the site, click on the **select wallet** button in the top middle of the page, then click **connect metamask**.
+Une fois sur le site, cliquez sur le bouton **select wallet** en haut au milieu de la page, puis sur **connect metamask**.
 
-MetaMask will prompt you to select an account to connect to the website.
-Choose one, confirm a few permissions, and you’ll see your account's icon along with your ETH and rETH balances - for example:
+MetaMask vous demandera de sélectionner un compte pour vous connecter au site.
+Choisissez-en un, confirmez quelques autorisations, et vous verrez l'icône de votre compte ainsi que vos soldes ETH et rETH - par exemple:
 
 <center>
 
@@ -140,9 +140,9 @@ Choose one, confirm a few permissions, and you’ll see your account's icon alon
 
 </center>
 
-Now, all that's left to do is deposit your ETH and receive some rETH back!
+Maintenant, il ne vous reste plus qu'à déposer vos ETH et à recevoir quelques rETH en retour!
 
-Enter the amount of ETH you want to deposit in the **trade __ ETH** box on the screen, then check the **agree to terms of service** box and press **start**:
+Saisissez le montant d'ETH que vous souhaitez déposer dans la case **trade __ ETH** à l'écran, puis cochez la case **agree to terms of service** et appuyez sur **start**:
 
 <center>
 
@@ -150,31 +150,31 @@ Enter the amount of ETH you want to deposit in the **trade __ ETH** box on the s
 
 </center>
 
-MetaMask will pop up with a window asking you to confirm your transaction.
+MetaMask affichera une fenêtre vous demandant de confirmer votre transaction.
 
-**Check the total gas cost of the transaction before you approve it - if it is very expensive relative to your transaction, you may want to consider acquiring rETH via another method!**
+**Vérifiez le coût total du gas de la transaction avant de l'approuver - s'il est très élevé par rapport à votre transaction, vous pouvez envisager d'acquérir du rETH par une autre méthode!**.
 
-Once you confirm it, the transaction will begin.
-When it's been mined and added to the chain, you'll see your balances update!
+Une fois que vous l'aurez confirmée, la transaction commencera.
+Une fois qu'elle a été minée et ajoutée à la chaîne, vous verrez vos soldes mis à jour!
 
 ::: tip NOTE
-As described in the previous page, it's **completely normal** to receive less rETH than the amount of ETH you put in.
-rETH and ETH have a **dynamic exchange rate**: as the Rocket Pool network earns rewards, 1 rETH will become worth more than 1 ETH, which in turn means 1 ETH will buy less than 1 rETH.
+Comme décrit à la page précédente, il est **tout à fait normal** de recevoir moins de rETH que le montant d'ETH que vous avez investi.
+Les rETH et les ETH ont un **taux de change dynamique**: au fur et à mesure que le réseau Rocket Pool gagne des récompenses, 1 rETH vaudra plus que 1 ETH, ce qui signifie que 1 ETH achètera moins que 1 rETH.
 :::
 
-That's it!
-You're now staking with Rocket Pool.
-All you need to do is hold onto your rETH, and you'll automatically gain your staking rewards as the value of the rETH token increases.
+Voilà, c'est fait!
+Vous êtes maintenant en train de staker avec Rocket Pool.
+Tout ce que vous avez à faire est de conserver vos tokens rETH, et vous obtiendrez automatiquement vos récompenses de staking au fur et à mesure que la valeur du token rETH augmente.
 
 ::: warning NOTE
-As a reminder, your rETH tokens will be **locked to your account for 24 hours** before you can transfer them or use them in DeFi applications.
-This is a security measure to prevent against timing attacks.
+Pour rappel, vos jetons rETH seront **bloqués sur votre compte pendant 24 heures** avant que vous puissiez les transférer ou les utiliser dans des applications DeFi.
+Il s'agit d'une mesure de sécurité visant à prévenir les attaques temporelles.
 :::
 
 
-## Unstaking
+## Dé-staking
 
-When you're ready to unstake and trade your rETH back for ETH, head back to the staking website and click on the **double arrow button** in the middle of the trade amounts dialog to switch to rETH mode:
+Lorsque vous êtes prêt à dé-stacker et à échanger vos rETH contre des ETH, retournez sur le site Web de staking et cliquez sur le **bouton double-flèche** au milieu de la boîte de dialogue des montants d'échange pour passer en mode rETH:
 
 <center>
 
@@ -182,22 +182,22 @@ When you're ready to unstake and trade your rETH back for ETH, head back to the 
 
 </center>
 
-As with staking, enter an amount of rETH to trade back, agree to the Terms of Service, and click **start**.
-Once again, a confirmation dialog will appear in MetaMask.
-Confirm the transaction, and once it's been mined, you will see the proper balances in your wallet.
+Comme pour le staking, entrez un montant de rETH à échanger en retour, acceptez les Terms of Service, et cliquez sur **start**.
+Une fois de plus, une boîte de dialogue de confirmation apparaîtra dans MetaMask.
+Confirmez la transaction, et une fois qu'elle a été minée, vous verrez les soldes appropriés dans votre portefeuille.
 
 ::: warning NOTE
-Trading rETH back for ETH is only possible when the **staking liquidity pool** has enough ETH in it to handle your trade.
-This is Rocket Pool's pool of ETH that comes from two sources:
+L'échange de rETH contre de l'ETH n'est possible que si le **pool de liquidités en staking** contient suffisamment d'ETH pour traiter votre transaction.
+Il s'agit du pool d'ETH de Rocket Pool qui provient de deux sources:
 
-1. ETH that other stakers have deposited, which hasn't been used by a Node Operator to create a new validator yet
-1. ETH that was returned by a Node Operator after they exited one of their validators and received their rewards from the Beacon Chain (**note that this is not possible until after the ETH1-ETH2 Merge occurs and withdrawals are enabled**)
+1. ETH que d'autres stakers ont déposé, qui n'a pas encore été utilisé par un opérateur de nœud pour créer un nouveau validateur
+1. L'ETH qui a été retourné par un opérateur de nœud après avoir arrêté un de ses validateurs et reçu ses récompenses de la Beacon Chain (**notez que ceci n'est pas possible jusqu'à ce que la fusion ETH1-ETH2 se produise et que les retraits soient activés**)
 
-During the period before the Merge, it's possible that the liquidity pool won't have enough balance to cover your unstaking.
-In this scenario, you may find other ways to trade your rETH back to ETH (such as a decentralized exchange like [Uniswap](https://app.uniswap.org/#/swap)) - though they will likely come with a small premium.
+Au cours de la période précédant la fusion (the Merge), il est possible que le pool de liquidité ne dispose pas d'un solde suffisant pour couvrir votre dé-staking.
+Dans ce cas, vous pouvez trouver d'autres moyens d'échanger vos rETH contre des ETH (par exemple sur un marché d'échange décentralisé tel que [Uniswap] (https://app.uniswap.org/#/swap)) - bien qu'ils soient susceptibles d'être accompagnés d'une petite majoration.
 :::
 
-That's all there is to staking with Rocket Pool!
-We hope that you found the process quick and easy.
+C'est tout ce qu'il y a à faire pour stacker avec Rocket Pool!
+Nous espérons que vous avez trouvé le processus rapide et facile.
 
-Feel free to swing by [our Discord server](https://discord.gg/G46XgK264a) to let us know what you thought of it and keep tabs on the project as it evolves.
+N'hésitez pas à vous rendre sur [notre serveur Discord (en anglais uniquement)] (https://discord.gg/G46XgK264a) pour nous dire ce que vous en avez pensé et suivre l'évolution du projet.
