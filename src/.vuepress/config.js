@@ -454,14 +454,14 @@ module.exports = {
                     ]
                   },
                   {
-                    title: 'Exécution d'un noeud Rocket Pool',
+                    title: 'Exécution d\'un noeud Rocket Pool',
                     sidebarDepth: 2,
                     collapsable: true,
                     children: [
                         'node/responsibilities',
                         'node/platform',
                         {
-                          title: 'Préparation d'un noeud local',
+                          title: 'Préparation d\'un noeud local',
                           sidebarDepth: 2,
                           collapsable: true,
                           children: [
@@ -472,7 +472,7 @@ module.exports = {
                           ]
                         },
                         {
-                          title: 'Preparation d'un noeud dans le cloud (VPS)',
+                          title: 'Preparation d\'un noeud dans le cloud (VPS)',
                           sidebarDepth: 2,
                           collapsable: true,
                           children: [
@@ -535,7 +535,7 @@ module.exports = {
               children: [
                 '',
                 {
-                  title: 'Exemples d'utilisation et d'intégration',
+                  title: 'Exemples d\'utilisation et d\'intégration',
                   sidebarDepth: 2,
                   collapsable: true,
                   children: [
@@ -551,7 +551,7 @@ module.exports = {
                   children: [
                       'api/contracts',
                       {
-                        title: 'Go Bindings (titre à traduire)',
+                        title: 'Go Bindings',
                         sidebarDepth: 2,
                         collapsable: true,
                         children: [
